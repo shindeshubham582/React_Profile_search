@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+/* Hide the spin buttons in WebKit browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spin buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+select:disabled {
+  appearance: none; /* For modern browsers */
+  -webkit-appearance: none; /* For Safari and older versions of Chrome */
+  -moz-appearance: none; /* For Firefox */
+  background-image: none; /* Removes the arrow in some browsers */
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+    color: inherit; /* Use the same text color as a regular element */
+    background-color: inherit; /* Use the same background color as a regular element */
+    border-color: inherit; /* Use the same border color as a regular element */
+    opacity: 1; /* Remove any default transparency */
+    cursor: default; /* Change the cursor back to the default if you don't want the not-allowed cursor */
+}
